@@ -297,9 +297,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.27016142, y: -0.61794335, z: 0.23896652, w: -0.6986085}
+  m_LocalPosition: {x: 0.7701812, y: 3.92415, z: -3.6320665}
+  m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -333,7 +333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70ff651ba1c15c46845edde79840f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrains: []
+  maxTerrainCount: 20
+  terrains:
+  - {fileID: 938263127986505650, guid: d294bbf7759540144875cb5357775b8b, type: 3}
+  - {fileID: 1179091424725193163, guid: 9d0b0f4a8cfdfd949a4325216874e81b, type: 3}
+  - {fileID: 8121842253268294337, guid: 6ea5bfbf8bb85ed4483bc333b1a8669d, type: 3}
 --- !u!4 &1920579030
 Transform:
   m_ObjectHideFlags: 0
@@ -343,7 +347,7 @@ Transform:
   m_GameObject: {fileID: 1920579028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2385187, y: 6.3646955, z: 6.997325}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
