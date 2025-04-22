@@ -7,6 +7,7 @@ public class TerrainGenerator : MonoBehaviour
 
     [SerializeField] private int maxTerrainCount;
     [SerializeField] private List<TerrainData> terrainDatas = new List<TerrainData>();
+    [SerializeField] private Transform terrainHolder;
 
     private List<GameObject> currentTerrains = new List<GameObject>();
     private Vector3 currentPosition = new Vector3(0, 0, 0);
@@ -14,30 +15,38 @@ public class TerrainGenerator : MonoBehaviour
     private void Start()
     {
         for (int i = 0; i < maxTerrainCount; i++){
-            SpawnTerrain();
+            SpawnTerrain(true);
         }
+        maxTerrainCount = currentTerrains.Count;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            SpawnTerrain();
+            SpawnTerrain(false);
         }
     }
 
-    private void SpawnTerrain()
+    private void SpawnTerrain(bool isStart)
     {
         int whichTerrain = Random.Range(0, terrainDatas.Count);
+        Debug.Log("whichTerrain: " + whichTerrain);
+        Debug.Log("count: " + terrainDatas.Count);
+        //Console.WriteLine("whichTerrain: " + whichTerrain);
         int terrainInSuccession = Random.Range(1, terrainDatas[whichTerrain].maxInSuccession);
+        
         for (int i = 0; i < terrainInSuccession; i++)
         {
-            GameObject terrain = Instantiate(terrainDatas[whichTerrain].terrain, currentPosition, Quaternion.identity);
+            GameObject terrain = Instantiate(terrainDatas[whichTerrain].terrain, currentPosition, Quaternion.identity, terrainHolder);
             currentTerrains.Add(terrain);
-            if (currentTerrains.Count > maxTerrainCount)
+            if (!isStart) 
             {
-                Destroy(currentTerrains[0]);
-                currentTerrains.RemoveAt(0);
+                if (currentTerrains.Count > maxTerrainCount)
+                {
+                    Destroy(currentTerrains[0]);
+                    currentTerrains.RemoveAt(0);
+                }
             }
             currentPosition.x++;
 
