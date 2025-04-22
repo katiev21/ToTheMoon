@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591192c5d92d34f3c99a493cb319a328, type: 3}
+  m_Name: Sky
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 8121842253268294337, guid: 6ea5bfbf8bb85ed4483bc333b1a8669d, type: 3}
+  maxInSuccession: 3
