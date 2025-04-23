@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private TerrainGenerator terrainGenerator;
+
     private Animator animator;
     private bool isHopping;
 
@@ -16,14 +18,29 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W) && !isHopping)
         {
-            animator.SetTrigger("hop");
-            isHopping = true;
-            int newZ = 0;
+            float zDifference = 0;
             if(transform.position.z % 1 != 0)
             {
-                newZ = Mathf.RoundToInt(transform.position.z + 1);    
+                zDifference = Mathf.Round(transform.position.z) - transform.position.z;    
             }
-            transform.position = (transform.position + new Vector3(1, 0, newZ));
+            MoveCharacter(new Vector3(1, 0, zDifference));
+        }
+        else if (Input.GetKeyDown(KeyCode.A) && !isHopping)
+        {
+            MoveCharacter(new Vector3(0, 0, 1));
+
+        }
+        else if (Input.GetKeyDown(KeyCode.D) && !isHopping)
+        {
+            MoveCharacter(new Vector3(0, 0, -1));
+        }
+
+        private void MoveCharacter (Vector3 difference)
+        {
+            animator.SetTrigger("hop");
+            isHopping = true;
+            transform.position = (transform.position + difference);
+            terrainGenerator.SpawnTerrain(false, transform.position);
         }
     }
 
