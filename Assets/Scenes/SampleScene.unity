@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -304,56 +305,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 27.301, y: 66.854, z: 0.812}
---- !u!1 &1920579028
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1920579030}
-  - component: {fileID: 1920579029}
-  m_Layer: 0
-  m_Name: Terrain Generator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1920579029
+--- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920579028}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f317044f96484c85dac5e1cab66f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1920579029 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+  m_PrefabInstance: {fileID: 1951523572456166533}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d70ff651ba1c15c46845edde79840f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTerrainCount: 30
-  terrainDatas:
-  - {fileID: 11400000, guid: 9f26d72bfeb754a6693541268816ae4b, type: 2}
-  - {fileID: 11400000, guid: 62a4786c0deedaa46ab18f95f2233244, type: 2}
-  - {fileID: 11400000, guid: 3e9df4fd90b9c5442aaf6486cb734cbe, type: 2}
-  terrainHolder: {fileID: 2086263231}
---- !u!4 &1920579030
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920579028}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086263230
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +359,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1951523572456166533
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: terrainHolder
+      value: 
+      objectReference: {fileID: 2086263231}
+    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: maxTerrainCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: currentPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088150620473031061, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_Name
+      value: Terrain Generator
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111417443623385, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
 --- !u!1001 &9066702452279622471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -437,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6847581339645358661, guid: 45d633d93a7ba994baa47f8e66c0766f, type: 3}
+      propertyPath: terrainGenerator
+      value: 
+      objectReference: {fileID: 1920579029}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -446,8 +497,8 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1951523572456166533}
   - {fileID: 963194228}
   - {fileID: 2086263231}
   - {fileID: 705507995}
-  - {fileID: 1920579030}
   - {fileID: 9066702452279622471}

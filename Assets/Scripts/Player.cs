@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
             if(transform.position.z % 1 != 0)
             {
                 zDifference = Mathf.Round(transform.position.z) - transform.position.z;    
-            }
+            } 
             MoveCharacter(new Vector3(1, 0, zDifference));
         }
         else if (Input.GetKeyDown(KeyCode.A) && !isHopping)
