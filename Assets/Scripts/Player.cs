@@ -34,14 +34,15 @@ public class Player : MonoBehaviour
         {
             MoveCharacter(new Vector3(0, 0, -1));
         }
+        
+    }
 
-        private void MoveCharacter (Vector3 difference)
-        {
-            animator.SetTrigger("hop");
-            isHopping = true;
-            transform.position = (transform.position + difference);
-            terrainGenerator.SpawnTerrain(false, transform.position);
-        }
+    private void MoveCharacter(Vector3 difference)
+    {
+        animator.SetTrigger("hop");
+        isHopping = true;
+        transform.position = (transform.position + difference);
+        terrainGenerator.SpawnTerrain(false, transform.position);
     }
 
     public void FinishHop()
