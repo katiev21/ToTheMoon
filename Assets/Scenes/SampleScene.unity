@@ -298,14 +298,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17880377, y: 0.5119524, z: -0.10989328, w: 0.8329811}
-  m_LocalPosition: {x: -3.4, y: 8.06, z: -5.27}
+  m_LocalRotation: {x: -0.2007503, y: -0.53390163, z: 0.12425435, w: -0.811917}
+  m_LocalPosition: {x: 0.29, y: 6.49, z: -1.72}
   m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 27.301, y: 66.854, z: 0.812}
-=======
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,14 +379,6 @@ PrefabInstance:
       propertyPath: terrainHolder
       value: 
       objectReference: {fileID: 2086263231}
-    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
-      propertyPath: maxTerrainCount
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
-      propertyPath: minDistanceFromPlayer
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4088150620473031061, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
       propertyPath: m_Name
       value: Terrain Generator
