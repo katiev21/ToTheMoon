@@ -270,7 +270,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -20
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -317,6 +317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942f317044f96484c85dac5e1cab66f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2115431157}
+  offset: {x: 1, y: 2.35, z: 0}
+  smoothness: 0.1
 --- !u!114 &1920579029 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
@@ -359,6 +362,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2115431157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6818052073072396308, guid: 45d633d93a7ba994baa47f8e66c0766f, type: 3}
+  m_PrefabInstance: {fileID: 9066702452279622471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1951523572456166533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,18 +379,6 @@ PrefabInstance:
       propertyPath: terrainHolder
       value: 
       objectReference: {fileID: 2086263231}
-    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
-      propertyPath: maxTerrainCount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
-      propertyPath: currentPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915955688382333045, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
-      propertyPath: minDistanceFromPlayer
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 4088150620473031061, guid: 8f377b48a42a24687b42f08a7d12f54f, type: 3}
       propertyPath: m_Name
       value: Terrain Generator
@@ -478,6 +474,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4973025591428790153, guid: 45d633d93a7ba994baa47f8e66c0766f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262646587405069799, guid: 45d633d93a7ba994baa47f8e66c0766f, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6818052073072396308, guid: 45d633d93a7ba994baa47f8e66c0766f, type: 3}

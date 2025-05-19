@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70ff651ba1c15c46845edde79840f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistanceFromPlayer: 30
-  maxTerrainCount: 30
+  minDistanceFromPlayer: 20
+  maxTerrainCount: 25
   terrainDatas:
   - {fileID: 11400000, guid: 9f26d72bfeb754a6693541268816ae4b, type: 2}
   - {fileID: 11400000, guid: 62a4786c0deedaa46ab18f95f2233244, type: 2}
